@@ -1,12 +1,1 @@
-package githello;
-
-public class Hello3 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hello3");
-		
-
-	}
-
-}
+ForIntent("Default Welcome Intent") public ActionResponse defaultWelcome(ActionRequest request) throws ExecutionException, InterruptedException { ResponseBuilder rb = getResponseBuilder(request); SimpleResponse simpleResponse = new SimpleResponse(); BasicCard basicCard = new BasicCard(); simpleResponse.setTextToSpeech("안녕하세요, 테스트앱 입니다.") .setDisplayText("안녕하세요, 테스트앱 입니다.") ; basicCard .setTitle("베이직 카드 제목") .setFormattedText("테스트용 베이직 카드") .setImage(new Image().setUrl(" 이미지 삽입 ") .setAccessibilityText("home")); rb.add(simpleResponse); rb.add(basicCard); return rb.build(); }
